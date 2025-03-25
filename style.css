@@ -174,15 +174,187 @@ a:hover{
     font-weight: 500;
 }
 
-@media only screen and (max-width: 564px){
+@media (max-width: 428px) {
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    
+    :root{
+        --black-color: #020101;
+        --second-color: #b9b9b9;
+        --primary-color: #b5afaf;
+    }
+    
+    body{
+        background-position: center;
+        background-image: url('./images/bg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        font-family: Montserrat;
+    }
+    
+    a{
+        color: var(--second-color);
+        text-decoration: none;
+        font-family: Montserrat;
+    }
+    
+    a:hover{
+        text-decoration: underline;
+    }
+    
     .container{
-        padding: 20px;
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+    
+    .login_container{
+        position: relative;
+        backdrop-filter: blur(25px);
+        width: 350px;
+        border: 2px solid var(--primary-color);
+        padding: 7.5em 2.5em 4em 2.5em;
+        border-radius: 15px;
+        box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.2);
+        color: var(--second-color);
+    }
+    
+    .login_title{
+        position: absolute;
+        left: 50%;
+        top: 0;
+        display: flex;
+        transform: translateX(-50%);
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        background-color: var(--primary-color);
+        border-radius: 0 0 15px 15px;
+        height: 50px;
+    }
+    
+    .login_title span{
+        color: var(--black-color);
+        font-size: 20px;
+    }
+    
+    .login_title::before{
+        content: "";
+        top: 0;
+        left: -30px;
+        position: absolute;
+        border-top-right-radius: 50%;
+        width: 30px;
+        height: 30px;
+        box-shadow: 15px 0 0 0 var(--primary-color);
+        background: transparent;
+    }
+    
+    .login_title::after{
+        content: "";
+        top: 0;
+        right: -30px;
+        position: absolute;
+        border-top-left-radius: 50%;
+        width: 30px;
+        height: 30px;
+        box-shadow: -15px 0 0 0 var(--primary-color);
+        background: transparent;
+    }
+    
+    .input_wrapper{
+        flex-direction: column;
+        display: flex;
+        margin: 25px 0;
+        position: relative;
+    }
+    
+    .input_field{
+        width: 100%;
+        font-size: 16px;
+        height: 55px;
+        color: var(--second-color);
+        background-color: transparent;
+        padding-inline: 20px 40px;
+        outline: none;
+        border-radius: 15px;
+        border: 2px solid var(--primary-color);
+    }
+    
+    #user{
+        margin-bottom: 10px;
+    }
+    
+    .label{
+        position: absolute;
+        transition: 0.2s;
+        top: 18px;
+        left: 20px;
+    }
+    
+    .input_field:focus ~ .label,
+    .input_field:valid ~ .label{
+        position: absolute;
+        font-size: 10px;
+        top: -10px;
+        left: 20px;
+        background-color: var(--primary-color);
+        color: var(--black-color);
+        border-radius: 30px;
+        padding: 0 8px;
+    }
+    
+    .icon{
+        position: absolute;
+        font-size: 15px;
+        top: 20px;
+        right: 25px;
+    }
+    
+    .remember-forgot{
+        justify-content: space-between;
+        display: flex;
+        font-size: 12px;
     }
 
-    .login_container{
-        padding: 7.5em 1.5em 4em 1.5em;
+    #remember{
+        height: 10px;
+    }
+    
+    .input-submit{
+        background: #fff6f6;
+        width: 100%;
+        height: 50px;
+        font-size: 14px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-weight: 500;
+        border: none;
+        transition: 0.3s;
+        font-family: Montserrat;
+    }
+    
+    .input-submit:hover{
+        background: var(--second-color);
+    }
+    
+    .signup{
+        text-align: center;
+        font-size: 10px;
+    }
+    
+    .signup a{
+        font-weight: 500;
     }
 }
+
 
 
 
