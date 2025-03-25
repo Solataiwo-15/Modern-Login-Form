@@ -1,7 +1,7 @@
 ### Links
 
-- Solution URL: [Solution](https://github.com/Solataiwo-15/Lumo-Landing-Page)
-- Live Site URL: [Live Site](https://lumo-landing-page-24dn.vercel.app/)
+- Solution URL: [Solution](https://github.com/Solataiwo-15/Modern-Login-Form)
+- Live Site URL: [Live Site](https://modern-login-form-eta.vercel.app/)
 
 
 ### Built with
